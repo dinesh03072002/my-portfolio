@@ -44,7 +44,7 @@ function App() {
           </div> 
 
           {/* Right Column */} 
-          <div className="flex flex-col gap-6 order-3 lg:order-3"> 
+          <div className="flex flex-col gap-6 order-3 lg:order-3 "> 
             <TechStack /> 
           </div> 
         </div> 
