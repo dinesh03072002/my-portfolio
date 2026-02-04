@@ -36,7 +36,7 @@ const Socials = () => {
             href={social.url} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-12 h-12 flex items-center justify-center bg-[#1a1a1a] border border-white/10 rounded-xl text-gray-400 hover:text-[#00ff88] hover:translate-x-1 hover:border-[#00ff88]/30 hover:bg-[#00ff88]/5 transition-all duration-300 relative group opacity-0 animate-[slideInLeft_0.5s_ease-out_forwards]"
+            className="w-12 h-12 flex items-center justify-center bg-[#1a1a1a] border border-white/10 rounded-xl text-gray-400 hover:text-[#00ff88] hover:translate-x-1 hover:border-[#00ff88]/30 hover:bg-[#00ff88]/5 transition-all duration-300 relative group opacity-0 animate-slideInLeft"
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
             {/* Gradient border on hover */}
