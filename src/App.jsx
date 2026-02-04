@@ -23,7 +23,7 @@ function App() {
       <div className="container mx-auto px-5 py-10 relative z-10"> 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1400px] mx-auto"> 
           {/* Left Column */} 
-          <div className="flex flex-col gap-6"> 
+          <div className="flex flex-col gap-6 order-2 lg:order-1"> 
             <div onClick={() => setShowProjects(true)} className="cursor-pointer">
               <ProjectsCard />
             </div>
@@ -31,7 +31,7 @@ function App() {
           </div> 
 
           {/* Middle Column */} 
-          <div className="flex flex-col gap-6"> 
+          <div className="flex flex-col gap-6 order-1 lg:order-2"> 
             <HeroCard /> 
              
             {/* Design Engineer Badge */} 
@@ -44,7 +44,7 @@ function App() {
           </div> 
 
           {/* Right Column */} 
-          <div className="flex flex-col gap-6"> 
+          <div className="flex flex-col gap-6 order-3 lg:order-3"> 
             <TechStack /> 
           </div> 
         </div> 

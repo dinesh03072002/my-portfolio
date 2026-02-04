@@ -12,8 +12,8 @@ const ProjectsCard = ({ onClick }) => {
       </div>
 
       {/* Projects Title */}
-      <div className="relative z-10">
-        <h2 className="font-['Pacifico'] text-[64px] font-normal bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(255,255,255,0.1)] tracking-[2px] animate-[titleGlow_3s_ease-in-out_infinite]">
+      <div className="relative z-10 flex items-center justify-center pt-6">
+        <h2 className="font-['Pacifico'] text-[56px]  leading-[1.3] font-normal bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(255,255,255,0.1)] tracking-[2px] animate-[titleGlow_3s_ease-in-out_infinite]">
           Projects
         </h2>
       </div>
