@@ -10,7 +10,7 @@ const ProjectsShowcase = ({ onBack }) => {
       description: "Smart interview preparation platform that generates questions, analyzes spoken answers using AI, and provides instant personalized feedback.",
       tech: ["React", "Flask", "NLP", "Gemini API"],
       image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=600&fit=crop",
-      github: "https://github.com/dinesh/ecommerce",
+      github: "https://github.com/dinesh03072002/Ai-Powered-Interview-analyser.git",
       //live: "https://demo-ecommerce.com",
       color: "from-purple-500 to-pink-500"
     },
@@ -20,7 +20,7 @@ const ProjectsShowcase = ({ onBack }) => {
       description: "Secure admin panel with user authentication, role-based access, and protected routes.",
       tech: ["Next.js", "Node.js", "Express", "MySQL"],
       image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&h=600&fit=crop",
-      github: "https://github.com/dinesh/task-app",
+      github: "https://github.com/dinesh03072002/web-platform.git",
      // live: "https://task-manager-demo.com",
       color: "from-blue-500 to-cyan-500"
     },
@@ -32,7 +32,7 @@ const ProjectsShowcase = ({ onBack }) => {
 image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&h=600&q=80"
 ,
 
-      github: "https://github.com/dinesh/social-dashboard",
+      github: "https://github.com/dinesh03072002/Flight-Ticket-Booking-System.git",
       //live: "https://social-dash.com",
       color: "from-green-500 to-teal-500"
     },
