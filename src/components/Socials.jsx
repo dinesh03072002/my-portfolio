@@ -18,11 +18,11 @@ const Socials = () => {
   url: 'https://www.linkedin.com/in/dinesh-dubakula-935b73283/'
 },
 
-    { 
+ {/*   { 
   name: 'Instagram', 
   icon: 'M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zm5.25-.75a1 1 0 100 2 1 1 0 000-2z',
   url: 'https://www.instagram.com/dineshyuvi23'
-}
+}*/}
 
   ];
 
@@ -30,35 +30,43 @@ const Socials = () => {
     <>
       {/* Desktop - Left sidebar */}
       <div className="hidden lg:flex fixed left-10 top-1/2 -translate-y-1/2 flex-col gap-4 z-[100]">
-        {socials.map((social, idx) => (
-          <a 
-            key={idx} 
-            href={social.url} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-12 h-12 flex items-center justify-center bg-[#1a1a1a] border border-white/10 rounded-xl text-gray-400 hover:text-[#00ff88] hover:translate-x-1 hover:border-[#00ff88]/30 hover:bg-[#00ff88]/5 transition-all duration-300 relative group opacity-0 animate-slideInLeft"
-            style={{ animationDelay: `${idx * 0.1}s` }}
-          >
-            {/* Gradient border on hover */}
-            <div className="absolute inset-0 rounded-xl p-[1px] bg-gradient-to-br from-[#00ff88] to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            
-            <svg 
-              className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" 
-              viewBox="0 0 24 24" 
-              fill="currentColor"
-            >
-              <path d={social.icon} />
-            </svg>
-            
-            {/* Tooltip */}
-            <span className="absolute left-full ml-4 px-3 py-2 bg-[#1a1a1a] border border-white/10 rounded-lg text-white text-[13px] font-medium whitespace-nowrap opacity-0 -translate-x-2.5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none">
-              {social.name}
-              <span className="absolute right-full top-1/2 -translate-y-1/2 border-[6px] border-transparent border-r-white/10"></span>
-            </span>
-          </a>
-        ))}
-      </div>
+  {socials.map((social, idx) => {
+    const isLast = idx === socials.length - 1;
 
+    return (
+      <a
+        key={idx}
+        href={social.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`
+          ${!isLast ? 'w-12 h-12 bg-[#1a1a1a] border border-white/10 rounded-xl hover:translate-x-1 hover:border-[#00ff88]/30 hover:bg-[#00ff88]/5' : 'w-auto h-auto'}
+          flex items-center justify-center
+          text-gray-400 hover:text-[#00ff88]
+          transition-all duration-300 relative group opacity-0 animate-slideInLeft
+        `}
+        style={{ animationDelay: `${idx * 0.1}s` }}
+      >
+        {!isLast && (
+          <div className="absolute inset-0 rounded-xl p-[1px] bg-gradient-to-br from-[#00ff88] to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+        )}
+
+        <svg
+          className="w-5 h-5 group-hover:scale-110 transition-transform duration-300"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d={social.icon} />
+        </svg>
+
+        <span className="absolute left-full ml-4 px-3 py-2 bg-[#1a1a1a] border border-white/10 rounded-lg text-white text-[13px] font-medium whitespace-nowrap opacity-0 -translate-x-2.5 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none">
+          {social.name}
+          <span className="absolute right-full top-1/2 -translate-y-1/2 border-[6px] border-transparent border-r-white/10"></span>
+        </span>
+      </a>
+    );
+  })}
+</div>
       {/* Mobile - Bottom navigation */}
       <div className="lg:hidden fixed bottom-5 left-1/2 -translate-x-1/2 flex gap-3 bg-[#1a1a1a] border border-white/10 rounded-2xl p-3 z-[100]">
         {socials.map((social, idx) => (
