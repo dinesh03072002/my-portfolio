@@ -68,17 +68,17 @@ const Socials = () => {
   })}
 </div>
       {/* Mobile - Bottom navigation */}
-      <div className="lg:hidden fixed bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-6 bg-black/60 backdrop-blur-md rounded-xl px-4 py-2 z-[100]">
-  {socials.map((social, idx) => (
+      <div className="lg:hidden fixed bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-black/70 backdrop-blur-md rounded-xl px-3 py-2 z-[100] w-fit">
+  {socials.slice(0, 3).map((social, idx) => (
     <a
       key={idx}
       href={social.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-gray-400 hover:text-[#00ff88] transition-all duration-300"
+      className="inline-flex items-center justify-center text-gray-400 hover:text-[#00ff88] transition-colors duration-300"
     >
       <svg
-        className="w-6 h-6 hover:scale-110 transition-transform duration-300"
+        className="w-6 h-6 transition-transform duration-300 hover:scale-110"
         viewBox="0 0 24 24"
         fill="currentColor"
       >
