@@ -69,29 +69,36 @@ const Socials = () => {
 </div>
       {/* Mobile - Bottom navigation */}
       <div className="lg:hidden fixed bottom-5 left-1/2 -translate-x-1/2 flex gap-3 bg-[#1a1a1a] border border-white/10 rounded-2xl p-3 z-[100]">
-        {socials.map((social, idx) => (
-          <a 
-            key={idx} 
-            href={social.url} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-[#00ff88] transition-all duration-300 relative group"
-          >
-            <svg 
-              className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" 
-              viewBox="0 0 24 24" 
-              fill="currentColor"
-            >
-              <path d={social.icon} />
-            </svg>
-            
-            {/* Mobile Tooltip - appears above */}
-            <span className="absolute bottom-full mb-2 px-3 py-1.5 bg-[#1a1a1a] border border-white/10 rounded-lg text-white text-xs font-medium whitespace-nowrap opacity-0 translate-y-2.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
-              {social.name}
-              <span className="absolute top-full left-1/2 -translate-x-1/2 border-[6px] border-transparent border-t-white/10"></span>
-            </span>
-          </a>
-        ))}
+        {socials.map((social, idx) => {
+  const isLast = idx === socials.length - 1;
+
+  return (
+    <a
+      key={idx}
+      href={social.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`
+        ${!isLast ? 'w-10 h-10' : 'w-auto h-auto'}
+        flex items-center justify-center
+        text-gray-400 hover:text-[#00ff88]
+        transition-all duration-300 relative group
+      `}
+    >
+      <svg
+        className="w-5 h-5 group-hover:scale-110 transition-transform duration-300"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d={social.icon} />
+      </svg>
+
+      <span className="absolute bottom-full mb-2 px-3 py-1.5 bg-[#1a1a1a] border border-white/10 rounded-lg text-white text-xs font-medium whitespace-nowrap opacity-0 translate-y-2.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
+        {social.name}
+      </span>
+    </a>
+  );
+})}
       </div>
     </>
   );
